@@ -1,0 +1,40 @@
+<div style="text-align: center;">
+    <nav>
+        <a routerLink="/home"><button class="dashboard" style="padding: 15px;background-color: white;color: teal;margin: 15px;width: 100px;border-style: solid;border-color: teal;">
+            HOME
+        </button></a>
+        &nbsp;
+        <a routerLink="/members"><button class="members" style="padding: 15px;background-color: teal;color: white;margin: 15px;width: 100px;">
+            MEMBERS
+        </button></a>
+    &nbsp;
+    <!-- <a routerLink="/login"><button class="login" style="padding: 15px;background-color: teal;color: white;margin: 15px;width: 100px;">
+        Logout
+    </button></a> -->
+    <!-- &nbsp;
+    <a routerLink="/add"><button class="login" style="padding: 15px;background-color: teal;color: white;margin: 15px;width: 100px;">
+        Add
+    </button></a> -->
+  </nav>
+  <br>
+  </div>
+ 
+    <app-member-search></app-member-search>
+
+
+<!-- //background-color:whitesmoke; text-align:start;width: 100%;overflow: hidden; -->
+
+<div style="height: auto;background-color:whitesmoke; text-align:start;width: 100%;overflow: hidden;" >
+    <div style="width: 99%;text-align: center;border-color: green;border-style: solid;">
+        <h2 style="color: green;text-decoration: solid;">Vaccinated</h2>
+        <div class="members-menu" style="background-color: white;color: green;">
+        <a *ngFor="let member of members"
+        routerLink="/detail/{{member.id}}" >
+        {{member.name}}
+        <br>
+        </a>
+    </div>
+    </div>
+   
+ 
+</div>

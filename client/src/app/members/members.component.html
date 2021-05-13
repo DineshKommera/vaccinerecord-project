@@ -1,0 +1,43 @@
+<div style="text-align: center;">
+  <nav>
+      <a routerLink="/home"><button class="dashboard" style="padding: 15px;background-color: teal;color: white;margin: 15px;width: 100px;">
+          HOME
+      </button></a>
+      &nbsp;
+      <a routerLink="/members"><button class="members" style="padding: 15px;background-color: white;color: teal;margin: 15px;width: 100px;border-style: solid;border-color: teal;">
+          MEMBERS
+      </button></a>
+  &nbsp;
+  <!-- <a routerLink="/login"><button class="login" style="padding: 15px;background-color: teal;color: white;margin: 15px;width: 100px;">
+      Logout
+  </button></a> -->
+  <!-- &nbsp;
+  <a routerLink="/add"><button class="login" style="padding: 15px;background-color: teal;color: white;margin: 15px;width: 100px;">
+      Add
+  </button></a> -->
+
+</nav>
+<br>
+</div>
+
+<div>
+
+  <input for="new-member" placeholder="Add a new member" #memberName />
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button class="add-button" (click)="add(memberName.value); memberName.value=''">
+    Add
+  </button>
+</div>
+
+<div>
+  <ul class="members">
+    <li *ngFor="let member of members">
+      <a routerLink="/detail/{{member.id}}">
+        <span class="badge">></span> {{member.name}}
+      </a>
+      <button class="delete" title="delete member"
+        (click)="delete(member)">Delete</button>
+    </li>
+  </ul>
+</div>

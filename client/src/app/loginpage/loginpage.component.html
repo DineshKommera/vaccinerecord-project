@@ -1,0 +1,56 @@
+<div style="text-align: right;">
+  <!-- Register Button-->
+<nav>
+      <a routerLink="/register"><button class="register"  style="padding: 15px;background-color: white;color: teal;margin: 15px;width: 100px;border-style: solid;border-color: teal;">
+          <b>Register</b>
+      </button></a>
+    &nbsp;
+      
+    </nav>
+</div>
+
+
+<div class="login" style="background-color:white;padding: 20px;text-align: center;height: 250px;width:auto;overflow: hidden;">
+  <!-- Login Label-->
+  <h2 style="color: grey;font-family:Verdana, Geneva, Tahoma, sans-serif;font-size: 25px;">Login</h2>
+
+
+
+<!-- Email -->  
+<form (submit)="loginUser($event)">
+    <div class="field">
+      <p class="control has-icons-left has-icons-right">
+        <input class="input" type="email" placeholder="Email" id="email">
+        <span class="icon is-small is-left">
+          <i class="fas fa-envelope"></i>
+        </span>
+        <span class="icon is-small is-right">
+          <i class="fas fa-check"></i>
+        </span>
+      </p>
+    </div>
+  <!--Password-->
+  <div class="field">
+      <p class="control has-icons-left">
+        <input class="input" type="password" 
+        autocomplete="off"
+        placeholder="Password" id="password">
+        <span class="icon is-small is-left">
+          <i class="fas fa-lock"></i>
+        </span>
+      </p>
+    </div> 
+
+
+  <!-- Login Button-->
+    <div class="field">
+      <p class="control">
+        <button type="submit" class="button is-success">
+          Login
+        </button>
+      </p>
+    </div>
+</form>
+
+  
+</div>

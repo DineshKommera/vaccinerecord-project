@@ -1,0 +1,18 @@
+<div *ngIf="member">
+    <h2>{{member.name | uppercase}} Details</h2>
+    <!-- <div><span>id: </span>{{member.id}}</div> -->
+    <div>
+      <label for="member-name">Member name: </label>
+      <input id="member-name" [(ngModel)]="member.name" placeholder="Member name"/>
+    </div>
+    <br>
+     <div>
+        <label for="member-name">Status: </label>
+        <select name=”color” [(ngModel)]="member.status">
+            <option value="0">Vaccinated</option>
+            <option value="1">Pending </option>
+            </select>
+      </div>
+    <button (click)="goBack()">go back</button>
+    <button (click)="save()">save</button>
+  </div>
